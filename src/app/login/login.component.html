@@ -1,0 +1,35 @@
+
+<div style="max-width: 400px; margin: auto; padding: 1em; padding-top: 250px;">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h3 class="card-title">Login</h3>
+            </mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Email / Username</mat-label>
+                <input matInput placeholder="Enter your email" type="text">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide() ? 'password' : 'text'" type="password"/>
+                <button
+                mat-icon-button
+                matSuffix
+                (click)="clickEvent($event)"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide()"
+                >
+                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-card-footer>
+                <button mat-flat-button type="submit">Sign in  <mat-icon>login</mat-icon></button>
+            </mat-card-footer>
+        </mat-card-content>
+    </mat-card>
+</div>

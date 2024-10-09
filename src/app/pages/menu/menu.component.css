@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-button:hover{
+    background-color: transparent;
+}
+
+mat-toolbar{
+    position: relative;
+    z-index: 5;
+}
+
+mat-sidenav-container{
+    height: calc(100vh - 64px);
+}
+
+mat-sidenav{
+    border-radius: 0;
+}
+
+.content{
+    padding: 24px;
+    background-color: white;
+}
+
+mat-sidenav, mat-sidenav-content {
+    transition: all 500ms ease-in-out;
+}
